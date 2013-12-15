@@ -1,0 +1,10 @@
+name 'heppuppet-grid_repos'
+version '0.1.0'
+
+author 'kreczko'
+license 'Apache License, Version 2.0'
+source 'git@github.com:HEP-Puppet/grid_repos.git'
+project_page 'https://github.com/HEP-Puppet'
+summary 'A collection of yum repositories for grid computing software'
+description 'A collection of yum repositories for grid computing software'
+dependency 'puppetlabs-stdlib', '>=4.1.0'
