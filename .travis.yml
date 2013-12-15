@@ -5,7 +5,7 @@ script: "rake spec"
 branches:
   only:
     - master
-    - dev
+    - development
 notifications:
   email: false
 gemfile: .gemfile
