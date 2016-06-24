@@ -6,8 +6,8 @@ class grid_repos::repository::emi (
   $priority = 40, #
   $version  = 3, #
   $proxy    = undef, #
-  ) {
-    
+  ) inherits grid_repos::params {
+
     repository{'emi-base':}
   repository{'emi-base':}
   yumrepo { "emi${version}-base":

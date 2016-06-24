@@ -4,7 +4,7 @@
 class grid_repos::repository::nordugrid (
   $version  = '13.11', #
   $priority = 25, #
-  ) {
+  ) inherits grid_repos::params {
   yumrepo { 'nordugrid':
     descr    => 'NorduGrid - $basearch - base',
     baseurl  => "http://download.nordugrid.org/repos/${version}/centos/\$releasever/\$basearch/base",

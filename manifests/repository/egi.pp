@@ -5,7 +5,7 @@ class grid_repos::repository::egi (
   $gpgcheck   = true,
   $mirrorlist = undef,
   $priority   = undef,
-  $proxy      = undef,) {
+  $proxy      = undef,) inherits grid_repos::params {
   if $baseurl == undef {
     repository { 'egi': }
   } else {

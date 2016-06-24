@@ -19,8 +19,8 @@
 # class {'grid_repos': do_nuffink => true}
 #
 class grid_repos (
-  $middle_ware_repos = ['umd', 'epel', 'egi'],
-  $do_nuffink        = false,) {
+  $middle_ware_repos = { 'umd' => {}, 'epel' => {}, 'egi' => {}},
+  $do_nuffink        = false,) inherits grid_repos::params {
   if $do_nuffink == true {
     notify { 'grid_repos::nuffink': message => 'OK, you are on your own then,\
        I hope you called grid_repos with a require\

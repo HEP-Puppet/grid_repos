@@ -2,7 +2,6 @@
 # Creates a repository either based on the passed parameters
 # or on the defaults from grid_repos::params
 define grid_repos::repository (
-  $name          = $title,
   $load_defaults = true,
   # if load_defaults == false, fill these out
   $baseurl       = undef,
@@ -16,7 +15,7 @@ define grid_repos::repository (
   # grid_repos::params::default_versions
 
   if $load_defaults == true {
-    $has_default = member($grid_repos::params::versions, $name)
+    $has_default = member(keys($grid_repos::params::versions), $name)
 
     if $has_default {
       yumrepo { $name:
